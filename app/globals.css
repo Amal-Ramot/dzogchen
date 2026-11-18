@@ -78,10 +78,10 @@ strong { color: #fff; font-weight: 600; }
 .nav-links a.active { color: var(--gold-2); background: rgba(232, 194, 122, 0.1); }
 .menu-btn { display: none; background: none; border: 1px solid var(--border); color: var(--text); border-radius: 12px; width: 44px; height: 44px; cursor: pointer; font-size: 1.3rem; }
 
-@media (max-width: 1320px) {
+@media all {
   .menu-btn { display: block; }
   .nav-links {
-    position: fixed; top: 72px; inset-inline: 12px; flex-direction: column;
+    position: fixed; top: 72px; inset-inline: 12px; flex-direction: column; max-width: 420px; margin-inline-start: auto;
     background: rgba(8, 9, 22, 0.97); border: 1px solid var(--border); border-radius: 20px;
     padding: 12px; gap: 2px; transform: translateY(-12px); opacity: 0; pointer-events: none; transition: .3s;
     max-height: calc(100vh - 90px); overflow-y: auto;
@@ -292,3 +292,26 @@ a.card:hover::before { opacity: .8; }
   .verse .tib { font-size: 1.3rem; }
 }
 .card .wylie { display: block; text-align: right; }
+
+/* ---------- Bilingual source texts ---------- */
+.toc { list-style: none; padding: 0; margin: 10px 0 0; }
+.toc li { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.toc span { color: var(--muted); font-size: .95rem; }
+.src-text { max-width: 1000px; margin: 0 auto; padding: 70px 0 20px; }
+.src-head { text-align: center; margin-bottom: 30px; }
+.src-tib-title { font-size: clamp(1.5rem, 3.5vw, 2.2rem); color: var(--gold); }
+.src-author { color: var(--gold-2); margin-bottom: 10px; }
+.src-intro { color: var(--muted); max-width: 720px; margin: 0 auto; }
+.stanza { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 26px; margin-bottom: 18px; }
+.stanza h3 { color: var(--gold-2); font-size: 1.2rem; margin-bottom: 12px; }
+.biline { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: baseline; padding: 7px 0; border-bottom: 1px dashed rgba(232,194,122,.08); }
+.biline:last-child { border-bottom: none; }
+.biline .he { font-family: var(--font-display); font-size: 1.12rem; color: #fff; line-height: 1.7; }
+.biline .tib { font-size: 1.22rem; color: var(--gold-2); text-align: left; line-height: 1.9; display: block; }
+.src-foot { text-align: center; color: var(--muted); font-size: .95rem; margin-top: 18px; }
+@media (max-width: 700px) {
+  .biline { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
+  .biline .tib { text-align: right; order: -1; }
+  .stanza { padding: 18px 16px; }
+}
+.src-text, section[id] { scroll-margin-top: 80px; }
