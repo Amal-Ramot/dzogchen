@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "ההשקפה" };
 export default function Page() {
   return (
     <>
-      <PageHeader eyebrow="ההשקפה" tib="གཞི་ ལམ་ འབྲས་བུ།" title="בסיס, דרך ופרי" lead="ההשקפה (ལྟ་བ, טָה-וָה) בדזוגצ'ן אינה פילוסופיה שיש להאמין בה אלא תיאור של מה שמתגלה כשמביטים ישירות בטבע התודעה." />
+      <PageHeader eyebrow="ההשקפה" tib="གཞི་ ལམ་ འབྲས་བུ།" title="בסיס, דרך ופרי" lead="ההשקפה (טָה-וָה) בדזוגצ'ן אינה פילוסופיה שיש להאמין בה אלא תיאור של מה שמתגלה כשמביטים ישירות בטבע התודעה." />
       <article className="narrow prose">
         <Reveal>
           <h2>הבסיס — <Tib>གཞི</Tib></h2>
